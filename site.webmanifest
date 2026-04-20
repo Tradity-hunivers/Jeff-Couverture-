@@ -1,0 +1,24 @@
+{
+  "name": "Jeff Couverture - Couvreur Montauban",
+  "short_name": "Jeff Couverture",
+  "description": "Couvreur Montauban depuis plus de 10 ans. Toiture, zinguerie, charpente et isolation dans tout le Tarn-et-Garonne.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D14",
+  "theme_color": "#1F589E",
+  "lang": "fr-FR",
+  "icons": [
+    {
+      "src": "images/logo-bauer.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/logo-bauer.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

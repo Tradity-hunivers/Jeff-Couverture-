@@ -1,0 +1,5 @@
+.claude/
+SKILL*.md
+*.backup
+.DS_Store
+Thumbs.db

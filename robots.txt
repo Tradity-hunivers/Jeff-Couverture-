@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.backup$
+
+# Sitemap
+Sitemap: https://jeff-couverture.fr/sitemap.xml
