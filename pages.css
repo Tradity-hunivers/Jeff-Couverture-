@@ -1720,13 +1720,129 @@ em {
   .gallery-item { aspect-ratio: 3 / 4; }
 }
 
-/* =================== CORAL ACCENTS (secondary brand) =================== */
+/* ============================================================
+   LIGHT THEME OVERRIDE (pages internes) — fond blanc + bleu/coral
+   ============================================================ */
 :root {
+  --bg: #FFFFFF;
+  --bg-darker: #F5F7FA;
+  --bg-accent: #EEF2F7;
+  --ink: #1A1F2E;
+  --ink-soft: #4A5566;
+  --text-light: #1A1F2E;
+  --muted: #5A6576;
+  --accent: #1F589E;
+  --accent-light: rgba(31,88,158,.10);
+  --accent-dark: #154374;
   --coral: #DB5A59;
   --coral-light: #E47674;
   --coral-dark: #B84746;
+  --card: #FFFFFF;
+  --border: rgba(20,30,50,0.08);
+  --line: rgba(20,30,50,0.08);
+  --line-strong: rgba(20,30,50,0.14);
 }
+
+html, body { background: #FFFFFF !important; }
+body {
+  background:
+    radial-gradient(ellipse 55% 40% at 10% 6%, rgba(31,88,158,0.07), transparent 65%),
+    radial-gradient(ellipse 45% 35% at 92% 25%, rgba(219,90,89,0.08), transparent 65%),
+    radial-gradient(ellipse 55% 40% at 45% 72%, rgba(31,88,158,0.05), transparent 65%),
+    radial-gradient(ellipse 40% 35% at 92% 92%, rgba(219,90,89,0.07), transparent 65%),
+    #FFFFFF !important;
+  color: var(--ink) !important;
+}
+
+/* Hero interne, sections */
+.hero { background: transparent !important; }
+.services, .drone, .cta-final { background: transparent; }
+.site-header.scrolled { background: rgba(255,255,255,0.92) !important; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+
+/* Header nav */
+.nav-link { color: var(--ink-soft); }
+.nav-link:hover, .nav-link.active { color: var(--accent); }
+.dropdown-menu { background: #FFFFFF; border: 1px solid var(--line); box-shadow: 0 20px 48px rgba(20,30,50,0.12); }
+.dropdown-menu a { color: var(--ink); }
+.dropdown-menu a:hover { background: rgba(31,88,158,0.07); color: var(--accent); }
+.header-phone { color: var(--ink); }
+.header-phone:hover { color: var(--coral); }
+.burger span { background: var(--ink); }
+.mobile-menu { background: rgba(255,255,255,0.97) !important; }
+.mobile-menu a { color: var(--ink) !important; }
+.logo-text { color: var(--ink); }
+.logo-text strong { color: var(--coral); }
+
+/* Boutons */
+.btn-primary { background: var(--coral); color: #FFFFFF; box-shadow: 0 8px 22px rgba(219,90,89,0.28); }
+.btn-primary:hover { background: var(--coral-dark); color: #FFFFFF; box-shadow: 0 12px 28px rgba(219,90,89,0.38); }
+.btn-outline { color: var(--accent); border: 1.5px solid var(--accent); background: transparent; }
+.btn-outline:hover { background: var(--accent); color: #FFFFFF; border-color: var(--accent); }
+
+/* Titres & textes */
+h1, h2, h3, h4, .t-h1, .t-h2, .t-h3 { color: var(--ink); }
+em { color: var(--accent); font-style: italic; font-weight: 500; }
+.hero-title em { color: var(--coral); }
+.t-h2 em, .hero-title em, .section-head em { color: var(--coral); }
+.hero-sub, .section-sub, p { color: var(--ink-soft); }
+
+.badge { background: rgba(31,88,158,0.08); color: var(--accent); border: 1px solid rgba(31,88,158,0.2); }
 .badge svg { color: var(--coral); }
+.section-head .badge { background: rgba(219,90,89,0.08); color: var(--coral); border-color: rgba(219,90,89,0.25); }
+
+/* Cards génériques */
+.service-card, .feature-card, .process-step, .faq-item, .info-card, .legal-info-card, .contact-card, .gallery-item, .testi-card, .review {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(20,30,50,0.05);
+  color: var(--ink);
+}
+.service-card:hover, .feature-card:hover, .contact-card:hover, .testi-card:hover {
+  border-color: var(--coral);
+  box-shadow: 0 16px 36px rgba(219,90,89,0.12);
+  background: #FFFFFF;
+}
+.service-card h3, .feature-card h3, .process-step h3, .faq-item h3, .info-card h3, .legal-info-card h3, .contact-card h3 { color: var(--ink); }
+.service-card p, .feature-card p, .process-step p, .faq-item p, .info-card p, .legal-info-card p, .contact-card p { color: var(--ink-soft); }
+.service-icon, .feature-icon, .contact-icon { background: rgba(31,88,158,0.08); color: var(--accent); }
+.service-card:hover .service-icon, .feature-card:hover .feature-icon, .contact-card:hover .contact-icon { background: var(--coral); color: #FFFFFF; }
+
+/* Listes check */
+.check-list li { color: var(--ink); }
 .check-list svg { stroke: var(--coral) !important; }
-.btn-primary:hover { background: var(--coral); color: #fff; }
+
+/* FAQ */
+details { background: #FFFFFF; border: 1px solid var(--line); color: var(--ink); }
+details summary { color: var(--ink); }
+details[open] { border-color: rgba(31,88,158,0.3); }
+details p { color: var(--ink-soft); }
+
+/* CTA final */
+.cta-final { background: transparent; }
 .cta-final .t-h2 em { color: var(--coral); }
+.cta-final p { color: var(--ink-soft); }
+
+/* Footer */
+.site-footer { background: var(--bg-darker) !important; color: var(--ink); border-top: 1px solid var(--line); }
+.site-footer h4 { color: var(--ink); }
+.site-footer a, .site-footer li, .site-footer p { color: var(--ink-soft); }
+.site-footer a:hover { color: var(--coral); }
+.footer-bottom { border-top: 1px solid var(--line); color: var(--ink-soft); }
+
+/* Process / timeline steps (blog, guides) */
+.process-step .step-num, .timeline-num { color: var(--coral); opacity: 0.35; }
+
+/* Forms */
+input, textarea, select { background: #F7F9FC !important; border: 1px solid var(--line-strong) !important; color: var(--ink) !important; }
+input::placeholder, textarea::placeholder { color: rgba(20,30,50,0.35) !important; }
+input:focus, textarea:focus, select:focus { border-color: var(--accent) !important; background: #FFFFFF !important; box-shadow: 0 0 0 3px rgba(31,88,158,0.12); outline: none; }
+label { color: var(--ink); }
+
+/* Map */
+.map-wrap { border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(20,30,50,0.08); background: #FFFFFF; }
+
+/* Blog cards */
+.blog-card, .article-card { background: #FFFFFF; border: 1px solid var(--line); color: var(--ink); box-shadow: 0 4px 14px rgba(20,30,50,0.05); }
+.blog-card:hover, .article-card:hover { border-color: var(--coral); box-shadow: 0 16px 36px rgba(219,90,89,0.15); transform: translateY(-4px); }
+.blog-card h3, .article-card h3 { color: var(--ink); }
+.blog-card p, .article-card p, .blog-card .meta { color: var(--ink-soft); }
