@@ -24,19 +24,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/charpente.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://jeff-couverture.fr/fenetres-toit.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://jeff-couverture.fr/isolation.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -67,12 +55,6 @@
   </url>
   <url>
     <loc>https://jeff-couverture.fr/entretien-gouttieres-montauban.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jeff-couverture.fr/isolation-combles-montauban.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
