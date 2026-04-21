@@ -6,7 +6,7 @@
   'use strict';
 
   /* ---------- CONFIG ---------- */
-  const FRAME_COUNT = 145;
+  const FRAME_COUNT = 192;
   const FRAME_SPEED = 2.5;
   const IMAGE_SCALE = 1.0;
   const FRAME_PATH = 'frames/frame_';
