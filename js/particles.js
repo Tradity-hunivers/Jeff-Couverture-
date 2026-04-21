@@ -1,15 +1,14 @@
 /* =============================================
-   Mobile-only red particles backdrop
-   Runs only on viewports <= 900px
+   Coral particles backdrop (desktop + mobile)
+   Couleur coral #DB5A59 (thème secondaire du site)
    ============================================= */
 (function () {
   'use strict';
 
-  if (!window.matchMedia('(max-width: 900px)').matches) return;
-  if (document.getElementById('mobileParticles')) return;
+  if (document.getElementById('bgParticles')) return;
 
   const canvas = document.createElement('canvas');
-  canvas.id = 'mobileParticles';
+  canvas.id = 'bgParticles';
   canvas.setAttribute('aria-hidden', 'true');
   Object.assign(canvas.style, {
     position: 'fixed',
@@ -17,7 +16,7 @@
     left: '0',
     width: '100%',
     height: '100%',
-    zIndex: '1',
+    zIndex: '0',
     pointerEvents: 'none',
   });
 
@@ -32,7 +31,8 @@
   function start() {
     const ctx = canvas.getContext('2d');
     let W = 0, H = 0;
-    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const IS_MOBILE = window.matchMedia('(max-width: 900px)').matches;
 
     function resize() {
       W = window.innerWidth;
@@ -46,18 +46,19 @@
     resize();
     window.addEventListener('resize', resize);
 
-    const COUNT = 28;
+    // Densité : desktop = plus de particules
+    const COUNT = IS_MOBILE ? 30 : 70;
     const particles = [];
     for (let i = 0; i < COUNT; i++) {
       particles.push({
         x: Math.random() * W,
         y: Math.random() * H,
-        r: Math.random() * 1.8 + 0.6,
+        r: Math.random() * 2.2 + 0.8,
         vx: (Math.random() - 0.5) * 0.25,
         vy: -(Math.random() * 0.45 + 0.15),
-        alpha: Math.random() * 0.55 + 0.2,
+        alpha: Math.random() * 0.5 + 0.25,
         twinkle: Math.random() * Math.PI * 2,
-        twinkleSpeed: 0.015 + Math.random() * 0.025,
+        twinkleSpeed: 0.012 + Math.random() * 0.022,
       });
     }
 
@@ -77,13 +78,13 @@
         const twinkleFactor = 0.75 + Math.sin(p.twinkle) * 0.25;
         const a = p.alpha * twinkleFactor;
 
-        // glow halo
+        // glow halo coral
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r * 4, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(31, 88, 158, ' + (a * 0.12).toFixed(3) + ')';
+        ctx.arc(p.x, p.y, p.r * 5, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(219, 90, 89, ' + (a * 0.14).toFixed(3) + ')';
         ctx.fill();
 
-        // core dot
+        // core dot coral
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fillStyle = 'rgba(219, 90, 89, ' + a.toFixed(3) + ')';
