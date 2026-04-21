@@ -171,7 +171,7 @@
       scrub: true,
       onUpdate: function (self) {
         const p = self.progress;
-        var op = Math.min(p * 3, 1);
+        var op = Math.min(p * 3, 1) * 0.22; // cap à 22% pour lisibilité thème clair
         canvas.style.opacity = op;
         if (canvasTint) canvasTint.style.opacity = op;
         var radius = Math.min(p * 2.5 * 75, 80);
@@ -212,7 +212,7 @@
           var radius = 80 * (1 - wipeProgress);
           canvas.style.clipPath = 'circle(' + radius + '% at 50% 50%)';
           if (canvasTint) canvasTint.style.clipPath = canvas.style.clipPath;
-          canvas.style.opacity = 1 - wipeProgress;
+          canvas.style.opacity = (1 - wipeProgress) * 0.22;
           if (canvasTint) canvasTint.style.opacity = canvas.style.opacity;
         } else if (p > wipeOutEnd) {
           canvas.style.opacity = 0;

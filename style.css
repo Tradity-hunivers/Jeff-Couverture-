@@ -2672,20 +2672,26 @@ em { color: var(--accent); }
 /* ============================================================
    VISIBILITÉ FORCÉE — canvas allégé + animations init
    ============================================================ */
-/* Canvas vidéo : visible mais adouci + fond blanc */
+/* Canvas vidéo : visible subtilement (opacité capée 22% via JS) */
 #videoCanvas {
-  filter: brightness(1.08) contrast(0.92) saturate(0.85);
+  filter: brightness(1.15) contrast(0.9) saturate(0.8);
   background: #FFFFFF;
 }
-/* Tint devient LUMINEUX (voile blanc) au lieu de sombre — préserve lisibilité */
+/* Tint désactivé sur thème clair — le canvas est déjà à faible opacité */
 #canvasTint,
 .canvas-tint {
-  background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.55) 100%) !important;
+  display: none !important;
 }
-/* Dark overlay (utilisé sur section stats) : devient voile blanc léger */
+/* Dark overlay désactivé : pas de surcouche sombre sur la section stats */
 #darkOverlay,
 .dark-overlay {
-  background: rgba(255,255,255,0.6) !important;
+  display: none !important;
+}
+
+/* Scroll sections : fond blanc semi-opaque par-dessus le canvas pour lisibilité */
+.scroll-section .section-inner {
+  position: relative;
+  z-index: 2;
 }
 
 /* Force all animation-initial opacity:0 à être visibles */
