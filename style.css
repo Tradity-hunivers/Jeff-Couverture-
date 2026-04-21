@@ -2670,13 +2670,23 @@ em { color: var(--accent); }
 .hero-scroll-hint span { color: var(--ink-soft); }
 
 /* ============================================================
-   VISIBILITÉ FORCÉE — désactive canvas sombre + animations init
+   VISIBILITÉ FORCÉE — canvas allégé + animations init
    ============================================================ */
-#videoCanvas,
+/* Canvas vidéo : visible mais adouci + fond blanc */
+#videoCanvas {
+  filter: brightness(1.08) contrast(0.92) saturate(0.85);
+  background: #FFFFFF;
+}
+/* Tint devient LUMINEUX (voile blanc) au lieu de sombre — préserve lisibilité */
 #canvasTint,
-.canvas-tint,
+.canvas-tint {
+  background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.55) 100%) !important;
+}
+/* Dark overlay (utilisé sur section stats) : devient voile blanc léger */
 #darkOverlay,
-.dark-overlay { display: none !important; opacity: 0 !important; }
+.dark-overlay {
+  background: rgba(255,255,255,0.6) !important;
+}
 
 /* Force all animation-initial opacity:0 à être visibles */
 .section-label,

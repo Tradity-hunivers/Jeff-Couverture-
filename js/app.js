@@ -43,7 +43,7 @@
   function drawFrame(idx) {
     const img = images[idx];
     if (!img || !img.complete) return;
-    ctx.fillStyle = '#0D0D14'; // match --bg-dark
+    ctx.fillStyle = '#FFFFFF'; // match light theme bg
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     const iw = img.naturalWidth || img.width;
