@@ -2649,7 +2649,7 @@ em { color: var(--accent); }
 
 /* Devis form */
 .section-devis .section-inner { color: var(--ink); }
-.devis-form-wrap { background: #FFFFFF; border: 1px solid var(--line); box-shadow: 0 16px 44px rgba(20,30,50,0.08); }
+.devis-form-wrap { background: transparent !important; border: none !important; box-shadow: none !important; }
 .devis-form label { color: var(--ink); }
 .devis-form input, .devis-form textarea, .devis-form select { background: #F7F9FC; border: 1px solid var(--line-strong); color: var(--ink); }
 .devis-form input::placeholder, .devis-form textarea::placeholder { color: rgba(20,30,50,0.35); }
