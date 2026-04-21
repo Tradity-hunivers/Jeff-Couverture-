@@ -2627,7 +2627,8 @@ em { color: var(--accent); }
 .testi-title-wrap .section-label::before { background: var(--coral); }
 
 /* FAQ */
-.section-faq { background: var(--bg-darker); }
+.section-faq { background: transparent !important; }
+.faq-item { background: transparent !important; border-left: none; border-right: none; border-radius: 0; }
 .faq-label { color: var(--coral); opacity: 1; }
 .faq-heading { color: var(--ink); }
 .faq-heading em { color: var(--accent); }
