@@ -2628,15 +2628,22 @@ em { color: var(--accent); }
 
 /* FAQ */
 .section-faq { background: transparent !important; }
-.faq-item { background: transparent !important; border-left: none; border-right: none; border-radius: 0; }
 .faq-label { color: var(--coral); opacity: 1; }
 .faq-heading { color: var(--ink); }
 .faq-heading em { color: var(--accent); }
 .faq-intro { color: var(--ink-soft); }
-.faq-item { background: #FFFFFF; border: 1px solid var(--line); }
-.faq-item summary { color: var(--ink); }
+.faq-item {
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+}
+.faq-item:last-child { border-bottom: 1px solid var(--line) !important; }
+.faq-item summary { color: var(--ink); padding: 1.5rem 0.25rem; }
 .faq-item summary:hover { color: var(--accent); }
-.faq-item[open] { border-color: rgba(31,88,158,0.25); }
+.faq-item[open] { background: transparent !important; }
+.faq-icon { border-color: var(--line-strong) !important; color: var(--coral); }
+.faq-item[open] .faq-icon { background: var(--coral); border-color: var(--coral) !important; color: #FFFFFF; }
 .faq-icon { color: var(--coral); }
 .faq-answer { color: var(--ink-soft); }
 
