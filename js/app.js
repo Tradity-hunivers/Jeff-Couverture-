@@ -324,7 +324,7 @@
         }
 
         case 'stagger-up': {
-          const items = section.querySelectorAll('.stat-item');
+          const items = section.querySelectorAll('.stat-item, .stat-v2');
           const overlay = darkOverlay;
 
           // Dark overlay
