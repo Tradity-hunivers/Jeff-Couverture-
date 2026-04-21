@@ -2593,11 +2593,21 @@ em { color: var(--accent); }
 .service-line:hover { color: var(--accent); }
 
 /* Why cards */
-.why-card { background: #FFFFFF; border: 1px solid var(--line); box-shadow: 0 4px 14px rgba(20,30,50,0.05); }
-.why-card h3 { color: var(--ink); }
-.why-card p { color: var(--ink-soft); }
-.why-icon { background: rgba(31,88,158,0.08); color: var(--accent); }
-.why-num { color: var(--coral); opacity: 0.3; }
+.why-card,
+.section-why .why-card {
+  background: var(--accent) !important;
+  border: 1px solid var(--accent-dark) !important;
+  box-shadow: 0 10px 30px rgba(31,88,158,0.25) !important;
+  color: #FFFFFF !important;
+}
+.why-card h3,
+.section-why .why-card h3 { color: #FFFFFF !important; }
+.why-card p,
+.section-why .why-card p { color: rgba(255,255,255,0.85) !important; }
+.why-icon,
+.section-why .why-icon { background: rgba(255,255,255,0.15) !important; color: #FFFFFF !important; }
+.why-num,
+.section-why .why-num { color: rgba(255,255,255,0.35) !important; opacity: 1 !important; }
 
 /* Stats */
 .stat-circle-bg { stroke: rgba(20,30,50,0.08); }
