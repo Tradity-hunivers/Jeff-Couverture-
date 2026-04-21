@@ -364,15 +364,28 @@
     </div>
   </section>
 
-  <!-- Section 4: Stats (dark overlay, stagger-up) -->
+  <!-- Section 4: Stats -->
   <section class="scroll-section section-stats" data-animation="stagger-up">
     <div class="section-inner align-center">
+      <p class="section-label stats-label">004 / En chiffres</p>
+      <h2 class="section-heading stats-heading">Des chiffres qui <em>parlent</em></h2>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="statGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1F589E"/>
+            <stop offset="100%" stop-color="#DB5A59"/>
+          </linearGradient>
+        </defs>
+      </svg>
       <div class="stats-grid">
         <div class="stat-item">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <div class="stat-circle">
             <svg viewBox="0 0 160 160" aria-hidden="true">
               <circle class="stat-circle-bg" cx="80" cy="80" r="70"></circle>
-              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82"></circle>
+              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82" stroke="url(#statGradient)"></circle>
             </svg>
             <div class="stat-circle-value">
               <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
@@ -381,10 +394,13 @@
           <span class="stat-label">Années d'expérience</span>
         </div>
         <div class="stat-item">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg>
+          </div>
           <div class="stat-circle">
             <svg viewBox="0 0 160 160" aria-hidden="true">
               <circle class="stat-circle-bg" cx="80" cy="80" r="70"></circle>
-              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82"></circle>
+              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82" stroke="url(#statGradient)"></circle>
             </svg>
             <div class="stat-circle-value">
               <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
@@ -393,16 +409,34 @@
           <span class="stat-label">Toitures rénovées</span>
         </div>
         <div class="stat-item">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
           <div class="stat-circle">
             <svg viewBox="0 0 160 160" aria-hidden="true">
               <circle class="stat-circle-bg" cx="80" cy="80" r="70"></circle>
-              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82"></circle>
+              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82" stroke="url(#statGradient)"></circle>
             </svg>
             <div class="stat-circle-value">
               <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
             </div>
           </div>
           <span class="stat-label">Clients satisfaits</span>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </div>
+          <div class="stat-circle">
+            <svg viewBox="0 0 160 160" aria-hidden="true">
+              <circle class="stat-circle-bg" cx="80" cy="80" r="70"></circle>
+              <circle class="stat-circle-fg" cx="80" cy="80" r="70" stroke-dasharray="439.82" stroke-dashoffset="439.82" stroke="url(#statGradient)"></circle>
+            </svg>
+            <div class="stat-circle-value">
+              <span class="stat-number" data-target="48">0</span><span class="stat-suffix">h</span>
+            </div>
+          </div>
+          <span class="stat-label">Devis envoyé</span>
         </div>
       </div>
     </div>
