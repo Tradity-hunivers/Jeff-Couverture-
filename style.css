@@ -2687,6 +2687,14 @@ em { color: var(--accent); }
 .scroll-line { background: linear-gradient(to bottom, var(--coral), transparent); }
 .hero-scroll-hint span { color: var(--ink-soft); }
 
+/* Why CTA (bouton sous cards "Pourquoi choisir") */
+.why-cta {
+  display: inline-flex;
+  margin: 2.5rem auto 0;
+  justify-content: center;
+}
+.section-why .section-inner { align-items: center; }
+
 /* ============================================================
    VISIBILITÉ FORCÉE — canvas allégé + animations init
    ============================================================ */
