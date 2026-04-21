@@ -86,7 +86,7 @@
         // core dot
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(239, 68, 68, ' + a.toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(219, 90, 89, ' + a.toFixed(3) + ')';
         ctx.fill();
       }
       requestAnimationFrame(tick);

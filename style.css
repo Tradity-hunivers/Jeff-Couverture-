@@ -2668,3 +2668,87 @@ em { color: var(--accent); }
 /* Scroll hint */
 .scroll-line { background: linear-gradient(to bottom, var(--coral), transparent); }
 .hero-scroll-hint span { color: var(--ink-soft); }
+
+/* ============================================================
+   VISIBILITÉ FORCÉE — désactive canvas sombre + animations init
+   ============================================================ */
+#videoCanvas,
+#canvasTint,
+.canvas-tint,
+#darkOverlay,
+.dark-overlay { display: none !important; opacity: 0 !important; }
+
+/* Force all animation-initial opacity:0 à être visibles */
+.section-label,
+.section-heading,
+.section-body,
+.section-cta,
+.services-list,
+.services-cards,
+.service-card-home,
+.testimonials-stack,
+.testimonial-card,
+.testi-card,
+.testi-track,
+.stat-item,
+.stat-circle-value,
+.fade-up,
+.faq-item,
+.faq-text,
+.faq-list,
+.why-card,
+.local-grid,
+.devis-form-wrap,
+.hero-eyebrow,
+.hero-title,
+.hero-sub,
+.hero-cta,
+.hero-trust,
+.hero-visual,
+.hero-scroll-hint,
+.marquee { opacity: 1 !important; }
+
+/* Transform reset — annule les translations initiales des animations */
+.section-label,
+.section-heading,
+.section-body,
+.section-cta,
+.fade-up,
+.stat-item,
+.testimonial-card,
+.testi-card { transform: none !important; }
+
+/* Scroll sections : fond blanc explicite pour garantir contraste */
+.scroll-section { background: transparent; color: var(--ink); }
+.section-services,
+.section-about,
+.section-drone,
+.section-local,
+.section-why,
+.section-testimonials,
+.section-devis,
+.section-stats { background: transparent; }
+
+/* Texte global sûr — toutes les sections */
+.scroll-section h1,
+.scroll-section h2,
+.scroll-section h3,
+.scroll-section p,
+.scroll-section span,
+.scroll-section li,
+.scroll-section label { color: inherit; }
+.scroll-section p { color: var(--ink-soft); }
+.scroll-section h1, .scroll-section h2, .scroll-section h3 { color: var(--ink); }
+.scroll-section em { color: var(--accent); }
+
+/* Marquee (géant fond scroll) : réduire opacité pour pas perturber */
+.marquee { opacity: 0.4 !important; }
+
+/* Textes résiduels #fff forcés en sombre */
+.section-heading, h2.section-heading, h2.faq-heading, .faq-heading, .hero-title, .hero-title .word { color: var(--ink) !important; }
+.hero-title .word em, .faq-heading em, .section-heading em { color: var(--accent) !important; }
+.hero-title em, .t-h2 em { color: var(--coral) !important; }
+
+/* Stats numbers */
+.stat-number, .stat-circle-value { color: var(--accent) !important; }
+.stat-suffix { color: var(--coral) !important; }

@@ -1846,3 +1846,37 @@ label { color: var(--ink); }
 .blog-card:hover, .article-card:hover { border-color: var(--coral); box-shadow: 0 16px 36px rgba(219,90,89,0.15); transform: translateY(-4px); }
 .blog-card h3, .article-card h3 { color: var(--ink); }
 .blog-card p, .article-card p, .blog-card .meta { color: var(--ink-soft); }
+
+/* ============================================================
+   VISIBILITÉ FORCÉE — pages internes
+   ============================================================ */
+.fade-up { opacity: 1 !important; transform: none !important; }
+.hero-title, .t-h1, .t-h2, .t-h3, h1, h2, h3, h4 { color: var(--ink) !important; }
+.hero-title em, .t-h2 em { color: var(--coral) !important; }
+p, li, td, th, .section-sub, .hero-sub { color: var(--ink-soft); }
+body, body * { color: inherit; }
+body { color: var(--ink) !important; }
+
+/* Blocs de contenu lisibles */
+.legal-content, .article-content, .blog-post, .about-content {
+  color: var(--ink);
+  background: transparent;
+}
+.legal-content p, .article-content p, .blog-post p { color: var(--ink-soft); }
+.legal-content h2, .article-content h2, .blog-post h2 { color: var(--ink); }
+.legal-content h3, .article-content h3 { color: var(--ink); }
+.legal-content strong, .article-content strong { color: var(--ink); }
+.legal-content a, .article-content a { color: var(--accent); }
+
+/* Hero interne : fond transparent, texte sombre */
+.contact-hero, .legal-hero, .blog-hero, .about-hero, .hero {
+  background: transparent !important;
+}
+.contact-hero h1, .legal-hero h1, .blog-hero h1, .about-hero h1 { color: var(--ink) !important; }
+.contact-hero em, .legal-hero em, .blog-hero em, .about-hero em { color: var(--coral) !important; }
+.contact-hero p, .legal-hero p, .blog-hero p, .about-hero p { color: var(--ink-soft); }
+
+/* Tableaux */
+table { background: #FFFFFF; color: var(--ink); border: 1px solid var(--line); }
+th { background: var(--bg-darker); color: var(--ink); border-bottom: 1px solid var(--line-strong); }
+td { color: var(--ink-soft); border-bottom: 1px solid var(--line); }
