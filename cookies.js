@@ -1,9 +1,26 @@
 (function() {
   'use strict';
 
+  // Google Analytics : charge seulement si le visiteur a accepte les cookies.
+  var GA_ID = 'G-1LZW33GZB7';
+  function chargerAnalytics() {
+    if (window.__gaCharge) return;
+    window.__gaCharge = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function() { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+
   // Check if user already made a choice
-  var consent = localStorage.getItem('cookie_consent');
-  if (consent === 'accepted' || consent === 'refused') return;
+  var consent = null;
+  try { consent = localStorage.getItem('cookie_consent'); } catch (e) {}
+  if (consent === 'accepted') { chargerAnalytics(); return; }
+  if (consent === 'refused') return;
 
   // Create banner
   var banner = document.createElement('div');
@@ -126,14 +143,14 @@
 
   // Handle choices
   function closeBanner(choice) {
-    localStorage.setItem('cookie_consent', choice);
+    try { localStorage.setItem('cookie_consent', choice); } catch (e) {}
     banner.style.transform = 'translateY(100%)';
     setTimeout(function() {
       if (banner.parentNode) banner.parentNode.removeChild(banner);
     }, 500);
   }
 
-  acceptBtn.addEventListener('click', function() { closeBanner('accepted'); });
+  acceptBtn.addEventListener('click', function() { closeBanner('accepted'); chargerAnalytics(); });
   refuseBtn.addEventListener('click', function() { closeBanner('refused'); });
 
   // Responsive: stack buttons on mobile
