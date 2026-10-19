@@ -1,0 +1,119 @@
+/* =================== MÉGA-MENU « SERVICES » (19/10/2026) ===================
+   Remplace la petite liste déroulante : prestations avec description,
+   guides pratiques et appel à l'action. Ordinateur uniquement (le menu
+   mobile reste la liste simple du burger). S'ouvre au clic (script existant)
+   et au survol / au clavier. */
+.nav-dropdown .dropdown-menu.mega-menu {
+  width: min(860px, calc(100vw - 3rem));
+  min-width: 0;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 0.95fr;
+  gap: 1.5rem;
+  text-align: left;
+  z-index: 50;
+}
+.nav-dropdown:hover .dropdown-menu.mega-menu,
+.nav-dropdown:focus-within .dropdown-menu.mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+/* Pont invisible entre le bouton et le panneau : le survol ne se coupe pas. */
+.nav-dropdown .dropdown-menu.mega-menu::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -0.9rem;
+  height: 0.9rem;
+}
+.mega-titre {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--coral, #DB5A59);
+  margin: 0 0 0.75rem;
+}
+.mega-col { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.dropdown-menu.mega-menu a.mega-lien {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.6rem 0.65rem;
+  border-radius: 10px;
+  color: var(--ink, #1A1F2E);
+  white-space: normal;
+}
+.dropdown-menu.mega-menu a.mega-lien:hover,
+.dropdown-menu.mega-menu a.mega-lien:focus-visible {
+  background: rgba(31, 88, 158, 0.07);
+  color: var(--accent, #1F589E);
+}
+.mega-icone {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: grid; place-items: center;
+  background: rgba(31, 88, 158, 0.08);
+  color: var(--accent, #1F589E);
+}
+.mega-icone svg { width: 22px; height: 22px; }
+.mega-nom { display: block; font-weight: 600; font-size: 0.92rem; line-height: 1.25; }
+.mega-desc { display: block; font-size: 0.78rem; line-height: 1.35; color: var(--ink-soft, #5A6170); margin-top: 0.1rem; }
+.dropdown-menu.mega-menu a.mega-guide {
+  display: block;
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  color: var(--ink, #1A1F2E);
+  white-space: normal;
+}
+.dropdown-menu.mega-menu a.mega-guide:hover,
+.dropdown-menu.mega-menu a.mega-guide:focus-visible { background: rgba(31, 88, 158, 0.07); color: var(--accent, #1F589E); }
+.dropdown-menu.mega-menu a.mega-tous { font-size: 0.82rem; font-weight: 600; color: var(--accent, #1F589E); padding: 0.55rem 0.65rem; }
+.mega-cta {
+  background: var(--accent-dark, #154374);
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.mega-cta .mega-titre { color: #F2A9A8; margin: 0; }
+.mega-cta p { margin: 0; font-size: 0.9rem; line-height: 1.45; color: rgba(255, 255, 255, 0.9); }
+.dropdown-menu.mega-menu .mega-cta a.mega-bouton {
+  display: block;
+  text-align: center;
+  background: var(--coral, #DB5A59);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+}
+.dropdown-menu.mega-menu .mega-cta a.mega-bouton:hover { background: #C84B4A; color: #FFFFFF; }
+.dropdown-menu.mega-menu .mega-cta a.mega-tel {
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+}
+.dropdown-menu.mega-menu .mega-cta a.mega-tel:hover { background: rgba(255, 255, 255, 0.08); color: #FFFFFF; }
+@media (max-width: 1100px) {
+  .nav-dropdown .dropdown-menu.mega-menu { grid-template-columns: 1.3fr 1fr; }
+  .mega-cta { grid-column: 1 / -1; flex-direction: row; align-items: center; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-dropdown .dropdown-menu.mega-menu { transition: none; }
+}
+/* Écrans moyens : panneau centré sur l'écran (sous le bouton, il débordait à gauche). */
+@media (max-width: 1180px) {
+  .nav-dropdown { position: static; }
+  .site-header .header-inner { position: relative; }
+  .nav-dropdown .dropdown-menu.mega-menu { left: 50%; top: calc(100% - 0.25rem); }
+}
