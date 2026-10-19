@@ -2902,3 +2902,26 @@ em { color: var(--accent); }
 /* Stats numbers */
 .stat-number, .stat-circle-value { color: var(--accent) !important; }
 .stat-suffix { color: var(--coral) !important; }
+
+/* =================== SECTION « EN CHIFFRES » : FOND UNI (19/10/2026) ===================
+   Fond bleu fonce plein a la place de l'animation de chantier qui transparaissait
+   derriere : lecture immediate des chiffres. */
+.scroll-section.section-stats {
+  background: var(--accent-dark, #154374);
+  position: relative;
+  z-index: 2;
+}
+.section-stats .stats-v2-header .section-label { color: #F2A9A8; }
+.section-stats .stats-v2-header .section-heading { color: #FFFFFF !important; }
+.section-stats .stats-v2-header .section-heading em { color: #9CC3F0 !important; }
+.section-stats .stats-v2-grid,
+.section-stats .stat-v2 { border-color: rgba(255,255,255,0.18); }
+.section-stats .stat-v2:hover { background: rgba(255,255,255,0.04); }
+.section-stats .stat-v2-kicker { color: #F2A9A8; }
+.section-stats .stat-v2-value {
+  background: none;
+  -webkit-text-fill-color: #FFFFFF;
+  color: #FFFFFF;
+}
+.section-stats .stat-v2-unit { -webkit-text-fill-color: #F2A9A8; }
+.section-stats .stat-v2-label { color: rgba(255,255,255,0.85); }
