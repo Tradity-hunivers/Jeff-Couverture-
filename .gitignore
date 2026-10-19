@@ -3,3 +3,6 @@ SKILL*.md
 *.backup
 .DS_Store
 Thumbs.db
+
+# Fichiers temporaires de wrangler (emulateur local)
+.wrangler/
