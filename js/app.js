@@ -15,9 +15,8 @@
   /* ---------- DOM ---------- */
   const canvas = document.getElementById('videoCanvas');
   const ctx = canvas.getContext('2d');
-  const loader = document.getElementById('loader');
-  const loaderFill = document.getElementById('loaderFill');
-  const loaderPercent = document.getElementById('loaderPercent');
+  // Ecran de chargement retire le 19/10/2026 : le site s'affiche tout de suite,
+  // les images de l'animation de chantier se chargent en arriere-plan.
   const darkOverlay = document.getElementById('darkOverlay');
   const canvasTint = document.getElementById('canvasTint');
   const marquee = document.getElementById('marquee');
@@ -72,8 +71,6 @@
         img.onload = img.onerror = function () {
           loaded++;
           const pct = Math.round((loaded / FRAME_COUNT) * 100);
-          loaderFill.style.width = pct + '%';
-          loaderPercent.textContent = pct + '%';
           if (loaded >= FRAME_COUNT) {
             resolve();
           }
@@ -92,17 +89,10 @@
       // Skip the heavy scroll-driven frame animation on mobile.
       canvas.style.display = 'none';
       if (canvasTint) canvasTint.style.display = 'none';
-      loaderFill.style.width = '100%';
-      loaderPercent.textContent = '100%';
     } else {
-      await preloadFrames();
-      drawFrame(0);
-      canvasReady = true;
+      preloadFrames().then(function () { drawFrame(currentFrame); canvasReady = true; if (window.ScrollTrigger) ScrollTrigger.refresh(); });
     }
 
-    // Hide loader
-    loader.classList.add('done');
-    setTimeout(() => { loader.style.display = 'none'; }, 700);
 
     // Init Lenis
     initLenis();
@@ -568,14 +558,8 @@
         submitBtn.innerHTML = '<span>Envoi en cours…</span>';
       }
       try {
-        var formData = new FormData(form);
-        var response = await fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-        var result = await response.json();
-        if (result.success) {
+        var envoye = window.envoyerDemande ? await window.envoyerDemande(form) : false;
+        if (envoye) {
           try { localStorage.removeItem(key); } catch (e2) {}
           // Hide form fields, show success
           Array.from(form.children).forEach(function (child) {
@@ -583,13 +567,13 @@
               child.style.display = 'none';
             }
           });
-          if (successEl) successEl.style.display = 'block';
           form.reset();
+          window.location.href = '/merci';
         } else {
-          throw new Error(result.message || 'Erreur');
+          throw new Error('envoi');
         }
       } catch (err) {
-        alert("Désolé, l'envoi a échoué. Contactez-nous directement au 06 62 88 04 73.");
+        alert("Désolé, l'envoi a échoué. Appelez directement Jeff au 06 62 88 04 73.");
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;

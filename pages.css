@@ -1205,7 +1205,7 @@ em {
   max-width: 280px;
 }
 
-.footer-col h4 {
+.footer-col h4, .footer-col .footer-col-titre {
   font-family: var(--font-display);
   font-size: .9rem;
   font-weight: 700;

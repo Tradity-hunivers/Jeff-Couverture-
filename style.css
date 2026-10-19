@@ -1988,7 +1988,7 @@ em {
   margin-top: 0.5rem !important;
 }
 
-.footer-col h4 {
+.footer-col h4, .footer-col .footer-col-titre {
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
