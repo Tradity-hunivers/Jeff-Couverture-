@@ -9,12 +9,11 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="pages.css">
-<link rel="stylesheet" href="megamenu.css?v=20261019">
-<link rel="stylesheet" href="corrections.css?v=20261019">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/space-grotesk-400-normal-latin.woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
+<link rel="stylesheet" href="/pages.css">
+<link rel="stylesheet" href="/megamenu.css?v=20261019">
+<link rel="stylesheet" href="/corrections.css?v=20261019">
 <!-- Contact-specific styles now in pages.css -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -22,11 +21,11 @@
 <meta property="og:site_name" content="Jeff Couverture">
 <meta property="og:title" content="Demande envoyée | Jeff Couverture">
 <meta property="og:description" content="Votre demande de devis a bien été envoyée à Jeff Couverture, couvreur à Montauban. Jeff vous recontacte rapidement ; pour une urgence, appelez-le directement.">
-<meta property="og:image" content="https://jeff-couverture.fr/images/toiture-2.png">
+<meta property="og:image" content="https://jeff-couverture.fr/images/toiture-2.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact - Couvreur Montauban | Jeff Couverture">
 <meta name="twitter:description" content="Devis gratuit et prise de rendez-vous">
-<meta name="twitter:image" content="https://jeff-couverture.fr/images/toiture-2.png">
+<meta name="twitter:image" content="https://jeff-couverture.fr/images/toiture-2.webp">
 </head>
 <body>
 <a class="skip-link" href="#main">Aller au contenu</a>
@@ -35,7 +34,7 @@
 <header class="site-header" id="header">
   <div class="wrap header-inner">
     <a href="/" class="logo" aria-label="Jeff Couverture - Accueil">
-      <img src="images/logo-jeff-couverture.webp" alt="Jeff Couverture" class="logo-img" width="245" height="136">
+      <img loading="lazy" decoding="async" src="/images/logo-jeff-couverture.webp" alt="Jeff Couverture" class="logo-img" width="245" height="136">
     </a>
     <nav class="main-nav" id="mainNav">
       <a href="/" class="nav-link">Accueil</a>
@@ -137,8 +136,8 @@
 </button>
 
 <!-- GSAP only (no Lenis) -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="/js/vendor/gsap.min.js"></script>
+<script src="/js/vendor/ScrollTrigger.min.js"></script>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
 
@@ -205,7 +204,7 @@ if(typeof gsap!=='undefined'){
   });
 }
 </script>
-<script src="cookies.js"></script>
+<script src="/cookies.js"></script>
 <script defer src="/helpai-conversions.js"></script>
 </body>
 </html>

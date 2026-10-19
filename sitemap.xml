@@ -3,84 +3,121 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://jeff-couverture.fr/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://jeff-couverture.fr/images/toiture-2.png</image:loc>
-      <image:title>Couvreur Montauban en chantier de rénovation toiture</image:title>
-    </image:image>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/charpente-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/hero.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/isolation-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/isolation-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/isolation-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/nettoyage-toiture-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/nettoyage-toiture-2.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/couverture.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://jeff-couverture.fr/a-propos</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-3.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/zinguerie.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://jeff-couverture.fr/blog</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zinguerie-1.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/fenetres-toit.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://jeff-couverture.fr/conditions-generales</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/nettoyage.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://jeff-couverture.fr/contact</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/a-propos.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://jeff-couverture.fr/couverture</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-6.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/blog.html</loc>
+    <loc>https://jeff-couverture.fr/entretien-gouttieres-montauban</loc>
     <lastmod>2026-04-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/nettoyage-toiture-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zinguerie-1.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/refaire-toiture-montauban.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://jeff-couverture.fr/fenetres-toit</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-6.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-7.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/fenetre-toit-8.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/entretien-gouttieres-montauban.html</loc>
+    <loc>https://jeff-couverture.fr/inspection-drone-toiture-montauban</loc>
     <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-3.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/inspection-drone-toiture-montauban.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://jeff-couverture.fr/mentions-legales</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/contact.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://jeff-couverture.fr/nettoyage</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/nettoyage-toiture-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/nettoyage-toiture-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-4.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-5.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-6.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/mentions-legales.html</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://jeff-couverture.fr/plan-du-site</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://jeff-couverture.fr/conditions-generales.html</loc>
+    <loc>https://jeff-couverture.fr/refaire-toiture-montauban</loc>
     <lastmod>2026-04-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <image:image><image:loc>https://jeff-couverture.fr/images/charpente-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/isolation-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/toiture-1.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://jeff-couverture.fr/zinguerie</loc>
+    <lastmod>2026-10-19</lastmod>
+    <image:image><image:loc>https://jeff-couverture.fr/images/logo-jeff-couverture.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zing1-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zing1-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zing1-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zinguerie-1.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zinguerie-2.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zinguerie-3.webp</image:loc></image:image>
+    <image:image><image:loc>https://jeff-couverture.fr/images/zinguerie-4.webp</image:loc></image:image>
   </url>
 </urlset>
