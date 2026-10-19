@@ -2,7 +2,9 @@
   'use strict';
 
   // Google Analytics : charge seulement si le visiteur a accepte les cookies.
-  var GA_ID = 'G-1LZW33GZB7';
+  // Balise Google de Jeff (destination : flux G-1LZW33GZB7). L'identifiant G- seul
+  // n'est plus servi par Google depuis la separation du 16/10/2026.
+  var GA_ID = 'GT-5MXQ7QT7';
   function chargerAnalytics() {
     if (window.__gaCharge) return;
     window.__gaCharge = true;
