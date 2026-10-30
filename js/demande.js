@@ -41,12 +41,21 @@
       utm_content: p.get('utm_content') || null,
       metadata: { page: location.pathname, ville: commune || null, gclid: p.get('gclid') || null, formulaire: form.id || null }
     };
+    // Origine du visiteur (helpai-conversions.js v2) : complete sans ecraser.
+    try {
+      var o = window.helpaiOrigine ? window.helpaiOrigine() : {};
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) { if (!corps[k] && o[k]) corps[k] = o[k]; });
+      ['gclid', 'gbraid', 'wbraid', 'referrer', 'landing', 'canal'].forEach(function (k) { if (!corps.metadata[k] && o[k]) corps.metadata[k] = o[k]; });
+    } catch (e) { /* jamais bloquant */ }
     // text/plain : requete « simple », pas de pre-verification CORS.
     return fetch(URL_RECEPTION, {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
       body: JSON.stringify(corps),
       keepalive: true
-    }).then(function (r) { return r.ok; }).catch(function () { return false; });
+    }).then(function (r) {
+      if (r.ok) window.dispatchEvent(new CustomEvent('helpai:lead', { detail: { form_id: form.id } }));
+      return r.ok;
+    }).catch(function () { return false; });
   };
 })();
